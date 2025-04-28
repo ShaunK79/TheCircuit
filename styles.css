@@ -6,7 +6,25 @@ body {
 }
 
 .circuit {
-    margin: 30px;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid #333;
+    padding: 20px;
+    width: 400px;
+    margin: 50px auto;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}
+
+.top-row,
+.bottom-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 
 img {
@@ -15,21 +33,59 @@ img {
 
 }
 
+
 .switch {
     padding: 10px 20px;
     font-size: 16px;
-    margin: 10px;
+    cursor: pointer;
 
+}
+
+.slider-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 input [type=range] {
-    width: 200px;
+    width: 150px;
 }
 
-.display {
+/* FLOW LINE */
+
+.flow-line {
+    height: 5px;
+    width: 300px;
+    background: linear-gradient(90deg, #ccc 50%, transparent 50%);
+    background-size: 20px 100%;
+    background-repeat: repeat-x;
+    transition: background-color 0.3s;
+}
+
+/* .display {
     margin-top: 30px;
     background-color: #e0f7fa;
     padding: 20px;
     display: inline-block;
     border-radius: 10px;
+} */
+
+/* Animated flow */
+
+.flow-on {
+    animation: flow 1s linear infinite;
+    background: linear-gradient(90deg, #00ff00 50%, transparent 50%);
+    background-size: 20px 100%;
+    background-repeat: repeat-x;
+}
+
+/* Keyframes flow */
+@keyframes flow {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 20px 0;
+    }
 }
