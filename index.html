@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>The Circuit</title>
+</head>
+<body>
+<h1>The Circuit</h1>
+
+<div class="circuit">
+    <img src="images/battery.svg" alt="battery" class="battery">
+    <button onclick="toggleSwitch()" class="switch">Switch OFF</button>
+    <input type="range" min="1" max="100" value="50" id="resistorSlider" onchange="updateResistance()">
+    <label for="resistorSlider">Resistance</label>
+    <img src="images/lightbulb-off.svg" alt="light bulb" id="lightBulb" class="bulb">
+</div>
+
+<div class="display">
+    <p>Voltage: <span id="voltage">9</span> V</p>
+    <p>Resistance: <span id="resistance">50</span> Ω</p>
+    <p>Current: <span id="current">0.18</span> A</p>
+</div> 
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
