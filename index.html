@@ -11,11 +11,22 @@
 <h1>The Circuit</h1>
 
 <div class="circuit">
+    <div class="top-row">
     <img src="images/battery.svg" alt="battery" class="battery">
-    <button onclick="toggleSwitch()" class="switch">Switch OFF</button>
+    <button onclick="toggleSwitch()" class="switch">Switch OFF</button><br>
+    </div>
+    <!-- flow line -->
+    <div class="flow-line" id="flowTop"></div>
+    <div class="bottom-row">
+        <div class="slider-section">
     <input type="range" min="1" max="100" value="50" id="resistorSlider" onchange="updateResistance()">
     <label for="resistorSlider">Resistance</label>
+    </div>
     <img src="images/lightbulb-off.svg" alt="light bulb" id="lightBulb" class="bulb">
+    </div>
+
+    <!-- flow line -->
+    <div class="flow-line" id="flowBottom"></div>
 </div>
 
 <div class="display">
